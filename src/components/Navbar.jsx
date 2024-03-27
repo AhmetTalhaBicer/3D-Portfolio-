@@ -1,16 +1,10 @@
 import { NavLink } from "react-router-dom";
 
-import { logo } from "../assets/images";
-
 const Navbar = () => {
   return (
     <header className="header">
-      <NavLink to="/">
-        <img
-          src={logo}
-          alt="logo"
-          className="w-10 h-10 border-2 border-gray-700 rounded-md shadow-md overflow-hidden"
-        />
+      <NavLink to="/" className="text-3xl font-extrabold text-gray-900 italic">
+        A<span className="text-blue-700">T</span>B
       </NavLink>
       <nav className="flex text-lg gap-7 font-medium">
         <NavLink
