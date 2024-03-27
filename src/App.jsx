@@ -1,31 +1,23 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+
 import { Footer, Navbar } from "./components";
-import { Main, AppContainer } from "./App.styles";
+import { About, Contact, Home, Projects } from "./pages";
 
 const App = () => {
   return (
-    <Main>
+    <main className="bg-slate-300/20">
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<AppContainer></AppContainer>} />
+          <Route path="/" element={<Home />} />
           <Route
             path="/*"
             element={
               <>
                 <Routes>
-                  <Route
-                    path="/about"
-                    element={<AppContainer></AppContainer>}
-                  />
-                  <Route
-                    path="/projects"
-                    element={<AppContainer></AppContainer>}
-                  />
-                  <Route
-                    path="/contact"
-                    element={<AppContainer></AppContainer>}
-                  />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/projects" element={<Projects />} />
+                  <Route path="/contact" element={<Contact />} />
                 </Routes>
                 <Footer />
               </>
@@ -33,7 +25,7 @@ const App = () => {
           />
         </Routes>
       </Router>
-    </Main>
+    </main>
   );
 };
 
